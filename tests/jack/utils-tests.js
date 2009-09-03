@@ -118,7 +118,7 @@ function multipart_fixture(name) {
     return {
         "CONTENT_TYPE" : type,
         "CONTENT_LENGTH" : length.toString(10),
-        "jack.input" : new BinaryIO(data)
+        "jsgi.input" : new BinaryIO(data)
     }
 }
 
