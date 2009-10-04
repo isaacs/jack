@@ -2,7 +2,7 @@ var assert = require("test/assert"),
     Utils = require("jack/utils"),
     MockRequest = require("jack/mock").MockRequest,
     File = require("file"),
-    BinaryIO = require("binary").BinaryIO;
+    ByteIO = require("io").ByteIO;
 
 
 // specify "should return nil if content type is not multipart" do
@@ -118,7 +118,7 @@ function multipart_fixture(name) {
     return {
         "CONTENT_TYPE" : type,
         "CONTENT_LENGTH" : length.toString(10),
-        "jsgi.input" : new BinaryIO(data)
+        "jsgi.input" : new ByteIO(data)
     }
 }
 
